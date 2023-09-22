@@ -21,6 +21,13 @@
   padding-right: 20px;
 }
 
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgb(78, 78, 78);
+    display: flex;
+    justify-content: center !important;
+  }
+}
 /* Galeria */
 .portada1 {
   background-color: #806953;
@@ -30,7 +37,7 @@
   background-color: rgb(211, 238, 238);
 }
 
-.imagen {
+.imagen-gp {
   width: 495px;
   padding: 0;
 }
@@ -102,6 +109,7 @@
   padding: 20px;
   text-align: center;
   font-size: medium;
+  color: #E9EDC9;
   background-color: #806953;
 }
 
@@ -109,20 +117,81 @@
   padding: 20px;
 }
 .columna-c .tarj-c {
-  padding: 20px;
+  padding: 40px;
 }
 .columna-c .tarj-c img {
   transition: all 1s;
 }
 .columna-c .tarj-c img:hover {
-  transform: scale(0.9);
+  transform: scale(1.1);
+}
+
+/* página FILOSOFIA */
+/* título de la página*/
+.tit-filosofia {
+  padding: 20px;
+  text-align: center;
+  font-size: medium;
+  color: #806953;
+  background-color: #FAEDCD;
+}
+
+.filosofia {
+  background-color: #806953;
+}
+.filosofia .jumbotron {
+  height: 500px;
+  background-image: url(/img/ecology-2789601.svg);
+  background-size: contain;
+  background-position: center;
+}
+.filosofia .jumbotron h2 {
+  color: #E9EDC9;
+  text-align: center;
+}
+.filosofia .jumbotron h3 {
+  color: #E9EDC9;
+  text-align: center;
+}
+.filosofia .jumbotron p {
+  color: #FEFAE0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+  .filosofia .jumbotron {
+    height: 600px;
+  }
+}
+.tit-pilares {
+  text-align: center;
+  background-color: #CCD5AE;
+  color: #806953;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.pilar-1 {
+  padding: 30px;
+  background-color: #FEFAE0;
+}
+
+.pilar-2 {
+  padding: 30px;
+  background-color: #FAEDCD;
+}
+
+.texto-pl {
+  text-align: center;
+  color: #806953;
 }
 
 /* página CONTACTO */
 .titulo-contacto {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   font-size: medium;
+  color: #E9EDC9;
   background-color: #806953;
 }
 

@@ -15,6 +15,23 @@ $color-aux1: rgb(211, 238, 238);
 $color-aux2: rgb(152, 230, 230);
 $color-aux3: rgb(78, 78, 78);
 
+// MIXINGS
+@mixin contenedor-texto-home($largo, $ancho, $alto, $color) {
+    height: $largo;
+    width: $ancho;
+    background-color: $color;
+    padding-top: $alto;
+    text-align: center;
+}
+
+@mixin titulo-pagina($color-letra, $color-fondo) {
+    padding: 20px;
+    text-align: center;
+    font-size: medium;
+    color: $color-letra;
+    background-color: $color-fondo;
+}
+
 /* barra de navegación - menú principal */
 .navbar{
     height: 80px;
@@ -33,6 +50,14 @@ $color-aux3: rgb(78, 78, 78);
     }
 }
 
+@media only screen and (min-width:0) and (max-width:768px) {
+    .navbar-collapse{
+        background-color: $color-aux3;
+        display: flex;
+        justify-content: center !important;
+    }
+}
+
 /* Galeria */
 .portada1{
     background-color: $color-p6;
@@ -40,7 +65,7 @@ $color-aux3: rgb(78, 78, 78);
 .portada2{
     background-color: $color-aux1;
 }
-.imagen{
+.imagen-gp{
     width: 495px;
     padding: 0;
 }
@@ -48,14 +73,6 @@ $color-aux3: rgb(78, 78, 78);
     border-top: 1px solid black;
     max-width: 100px;
     margin: 30px auto 20px auto;
-}
-
-@mixin contenedor-texto-home($largo, $ancho, $alto, $color) {
-    height: $largo;
-    width: $ancho;
-    background-color: $color;
-    padding-top: $alto;
-    text-align: center;
 }
 
 .texto1{
@@ -111,35 +128,88 @@ $color-aux3: rgb(78, 78, 78);
 
 /* título de la galería */
 .tit-galeria{
-    padding: 20px;
-    text-align: center;
-    font-size: medium;
-    background-color: $color-p6;
+    @include titulo-pagina($color-p2, $color-p6)
 }
 
 .columna-c{
     padding: 20px;
 
     .tarj-c{
-        padding: 20px;
+        padding: 40px;
 
         img{
             transition: all 1s;
         }
 
         img:hover{
-            transform: scale(0.9);
+            transform: scale(1.1);
         }
     }
+}
+
+/* página FILOSOFIA */
+
+/* título de la página*/
+.tit-filosofia{
+    @include titulo-pagina($color-p6, $color-p4);
+}
+
+.filosofia{
+    background-color: $color-p6;
+
+    .jumbotron{
+        height: 500px;
+        background-image: url(/img/ecology-2789601.svg);
+        background-size: contain;
+        background-position: center;
+    
+        h2{
+            color: $color-p2;
+            text-align: center;
+        }
+        h3{
+            color: $color-p2;
+            text-align: center;
+        }
+        p{
+            color: $color-p3;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width:0) and (max-width:768px) {
+    .filosofia .jumbotron{
+        height: 600px;
+    }
+}
+
+.tit-pilares{
+    text-align: center;
+    background-color: $color-p1;
+    color: $color-p6;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+
+.pilar-1{
+    padding: 30px;
+    background-color: $color-p3;
+}
+.pilar-2{
+    padding: 30px;
+    background-color: $color-p4;
+}
+.texto-pl{
+    text-align: center;
+    color: $color-p6;
 }
 
 /* página CONTACTO */
 
 .titulo-contacto{
-    padding: 10px;
-    text-align: center;
-    font-size: medium;
-    background-color: $color-p6;
+    @include titulo-pagina($color-p2, $color-p6)
 }
 .formulario{
     padding: 50px;
