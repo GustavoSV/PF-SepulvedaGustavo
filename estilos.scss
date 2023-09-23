@@ -159,7 +159,7 @@ $color-aux3: rgb(78, 78, 78);
 
     .jumbotron{
         height: 500px;
-        background-image: url(/img/ecology-2789601.svg);
+        background-image: linear-gradient(to bottom, rgba(110, 155, 155, 0.6), rgba(211, 230, 130, 0.7)),  url(/img/ecology-2789601.svg);
         background-size: contain;
         background-position: center;
     
@@ -206,6 +206,28 @@ $color-aux3: rgb(78, 78, 78);
     color: $color-p6;
 }
 
+/* página GUIA DE TALLAS */
+
+/* título de la página*/
+.tit-tallas{
+    @include titulo-pagina($color-p6, $color-p4);
+}
+
+.contenido{
+    background-color: $color-p1;
+    margin-bottom: 0;
+    padding: 30px;
+    text-align: center;
+    color: $color-p6;
+
+    h3{
+        margin-bottom: 20px;
+    }
+}
+
+.imagen-tabla{
+    background-color: $color-p4;
+}
 /* página CONTACTO */
 
 .titulo-contacto{

@@ -141,7 +141,7 @@
 }
 .filosofia .jumbotron {
   height: 500px;
-  background-image: url(/img/ecology-2789601.svg);
+  background-image: linear-gradient(to bottom, rgba(110, 155, 155, 0.6), rgba(211, 230, 130, 0.7)), url(/img/ecology-2789601.svg);
   background-size: contain;
   background-position: center;
 }
@@ -184,6 +184,31 @@
 .texto-pl {
   text-align: center;
   color: #806953;
+}
+
+/* página GUIA DE TALLAS */
+/* título de la página*/
+.tit-tallas {
+  padding: 20px;
+  text-align: center;
+  font-size: medium;
+  color: #806953;
+  background-color: #FAEDCD;
+}
+
+.contenido {
+  background-color: #CCD5AE;
+  margin-bottom: 0;
+  padding: 30px;
+  text-align: center;
+  color: #806953;
+}
+.contenido h3 {
+  margin-bottom: 20px;
+}
+
+.imagen-tabla {
+  background-color: #FAEDCD;
 }
 
 /* página CONTACTO */
